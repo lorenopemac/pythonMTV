@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mtv.views import index
+from mtv.views import saludarPersona, monstrarFamiliares
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludar/', index), # ESTA ES LA NUEVA FUNCTION
+    path('saludar/<nombre>/<apellido>/', saludarPersona), 
+    path('familia/', monstrarFamiliares),
 ]
